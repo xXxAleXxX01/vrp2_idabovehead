@@ -1,3 +1,10 @@
+--------------------------CREDITS--------------------------
+-------------------Script made by AleXxX-------------------
+--      Script made for ZenTrix Romania RolePlay         --
+--         Discord: https://discord.gg/BEFrqay           --
+--   Copyright 2020 ©AleXxXScript's. All rights served   --
+-----------------------------------------------------------
+
 config = {
     -- range where names are visible on this distance
     range = 15,
@@ -16,9 +23,6 @@ config = {
         default = "en",
         ['en'] = {
             speaking = "Vorbeste"
-        },
-        ['ru'] = {
-            speaking = "Говорит"
         }
     },
     colors = {
