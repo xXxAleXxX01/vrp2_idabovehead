@@ -1,7 +1,7 @@
 local names = class("Names", vRP.Extension)
 
 factions = {
-	{"!group.muie200", "ownercupata"}
+	{"!group.aaa", "owner"}
 }
 
 function names:__construct()
@@ -37,23 +37,6 @@ function names.event:playerLeave(user)
 		TriggerClientEvent('removeUser',v,user.id)
 	end
 end
-
---[[AddEventHandler('chatMessage', function(source, color, msg)
-	cm = stringsplit(msg, " ")
-	local user = vRP.users_by_source[source]
-	if user:hasPermission("sadmin.textchat") then
-if cm[1] == "/noid" then
-	CancelEvent()
-		TriggerClientEvent("SetGod", -1, source)
-		TriggerClientEvent('chatMessage', -1, "^0[^4ZenTrix^0]", {255, 0, 0}, "^0Un admin a ^1dezactivat ^0id-urile.")
-end    
-if cm[1] == "/id" then
-	CancelEvent()
-		TriggerClientEvent("SetGod1", -1, source)
-		TriggerClientEvent('chatMessage', -1, "^0[^4ZenTrix^0]", {255, 0, 0}, "^0Un admin a ^2activat ^0id-urile.")
-	end
-end    
-end)]]
 
 function stringsplit(inputstr, sep)
   if sep == nil then
