@@ -89,25 +89,25 @@ Citizen.CreateThread(function()
 	while true do
 		if IsControlPressed(1, 217) then
         for _, id in ipairs(GetActivePlayers()) do
-				--if GetPlayerPed(id) ~= GetPlayerPed(-1) then
+				if GetPlayerPed(id) ~= GetPlayerPed(-1) then
 				
 					if playerDistances[id] then
 						if (playerDistances[id] < disPlayerNames) then
                             x2, y2, z2 = table.unpack(GetEntityCoords(GetPlayerPed(id), true))
-                            if NetworkIsPlayerTalking(id) then
-                                DrawText3D(x2, y2, z2+1, idd[GetPlayerServerId(id)], 255,255,255)
+                            	if NetworkIsPlayerTalking(id) then
+                                	DrawText3D(x2, y2, z2+1, idd[GetPlayerServerId(id)], 255,255,255)
 								--DrawMarker(27, x2, y2, z2-0.97, 0, 0, 0, 0, 0, 0, 1.001, 1.0001, 0.5001, 173, 216, 230, 100, 0, 0, 0, 0)
 							else
 								DrawText3D(x2, y2, z2+1, idd[GetPlayerServerId(id)], 255,255,255)
 							end
 						elseif (playerDistances[id] < 10) then
 							x2, y2, z2 = table.unpack(GetEntityCoords(GetPlayerPed(id), true))						
-							if NetworkIsPlayerTalking(id) then
-                                --DrawMarker(27, x2, y2, z2-0.97, 0, 0, 0, 0, 0, 0, 1.001, 1.0001, 0.5001, 173, 216, 230, 100, 0, 0, 0, 0)
-							end
+							--if NetworkIsPlayerTalking(id) then
+                                				--DrawMarker(27, x2, y2, z2-0.97, 0, 0, 0, 0, 0, 0, 1.001, 1.0001, 0.5001, 173, 216, 230, 100, 0, 0, 0, 0)
+							--end
 						end
 					end
-				--end
+				end
 		end
 		end
         Citizen.Wait(0)
