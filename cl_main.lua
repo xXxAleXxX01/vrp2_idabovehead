@@ -87,7 +87,7 @@ end
 Citizen.CreateThread(function()
 	Wait(500)
 	while true do
-		if IsControlPressed(1, 217) then
+		--if IsControlPressed(1, 217) then
         for _, id in ipairs(GetActivePlayers()) do
 				if GetPlayerPed(id) ~= GetPlayerPed(-1) then
 				
@@ -108,7 +108,7 @@ Citizen.CreateThread(function()
 						end
 					end
 				end
-		end
+		--end
 		end
         Citizen.Wait(0)
     end
